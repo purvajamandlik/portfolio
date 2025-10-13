@@ -1,38 +1,185 @@
-.App {
-  text-align: center;
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
+body {
+  background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+  color: white;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  text-align: center;
+  animation: fadeBg 2s ease-in-out;
+}
+
+/* Navbar */
+nav {
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+  padding: 20px 40px;
+  background: rgba(0, 0, 0, 0.7);
+  z-index: 1000;
+  animation: slideDown 1s ease-in-out;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 25px;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: cyan;
+  font-size: 18px;
+  font-weight: bold;
+  padding: 10px 15px;
+  border-radius: 8px;
+  transition: all 0.3s ease-in-out;
+}
+
+nav ul li a:hover {
+  background: cyan;
+  color: black;
+  transform: scale(1.1);
+}
+
+/* Info Box */
+.info-box {
+  margin-top: 120px;
+  padding: 40px;
+  max-width: 800px;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1.5px solid cyan;
+  border-radius: 15px;
+  transition: transform 0.4s ease-in-out, box-shadow 0.4s ease-in-out;
+  animation: fadeUp 1.2s ease-in-out;
+}
+
+.info-box:hover {
+  transform: translateY(-5px) scale(1.03);
+  box-shadow: 0px 8px 25px rgba(0, 255, 255, 0.4);
+  cursor: pointer;
+}
+
+.info-box h1 {
+  font-size: 40px;
+  margin-bottom: 20px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  color: cyan;
+  transition: color 0.3s ease;
+}
+
+.info-box p, 
+.info-box li {
+  font-size: 18px;
+  line-height: 1.6;
+  margin-bottom: 10px;
+  transition: opacity 0.4s ease;
+}
+
+.info-box ul {
+  list-style: none;
+  padding: 0;
+}
+
+.info-box a {
+  color: cyan;
+  text-decoration: none;
+  transition: 0.3s ease;
+}
+
+.info-box a:hover {
+  text-decoration: underline;
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+/* Contact Form */
+form {
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+form input, form textarea {
+  padding: 12px;
+  border-radius: 10px;
+  border: 1.5px solid cyan;
+  background: rgba(0,0,0,0.5);
+  color: white;
+  font-size: 16px;
+  outline: none;
+  transition: 0.3s ease;
 }
+
+form input:focus, form textarea:focus {
+  border-color: white;
+  transform: scale(1.02);
+}
+
+form button {
+  padding: 12px;
+  border: none;
+  border-radius: 10px;
+  background: cyan;
+  color: black;
+  font-size: 18px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+form button:hover {
+  background: white;
+  color: black;
+  transform: translateY(-2px);
+}
+
+/* Animations */
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(30px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes slideDown {
+  from { transform: translateY(-50px); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
+}
+
+@keyframes fadeBg {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+ table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 20px;
+    }
+    th, td {
+      border: 1.5px solid cyan;
+      padding: 12px;
+      text-align: center;
+    }
+    th {
+      background: rgba(0, 255, 255, 0.1);
+      font-size: 18px;
+    }
+    td {
+      font-size: 16px;
+    }
+    tr:hover {
+      background: rgba(0, 255, 255, 0.2);
+      transition: 0.3s ease-in-out;
+    }
