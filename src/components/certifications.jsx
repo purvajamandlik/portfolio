@@ -1,10 +1,10 @@
-import React from 'react'
+
 
 const Certification = () => {
   return (
-<div class="info-box">
+<div className="info-box">
     <h1>Certifications</h1>
-    <div class="cert-list">
+    <div className="cert-list">
       <a href="#">Red Hat RH104 - Linux Fundamentals 9.1</a>
       <a href="#">Red Hat RH124 - System Administration I 9.3</a>
       <a href="#">Red Hat RH134 - System Administration II 9.3</a>

@@ -1,8 +1,7 @@
-import React from 'react'
 
 const Education = () => {
   return (
-      <div class="info-box">
+      <div className="info-box">
     <h1>Education</h1>
     <table>
       <tr>
