@@ -5,7 +5,7 @@ import Nav from './components/nav'
 import Home from './components/home';
 import Hobbies from './components/hobbies';
 import About from './components/about';
-import Certification from './components/certifications';
+import Certification from './components/certification';
 import Project from './components/projects';
 import Education from './components/education';
 import Contact from './components/contact'
