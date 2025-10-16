@@ -1,19 +1,23 @@
+import React from "react";
 
-
-const Certification = () => {
+const Certifications = () => {
   return (
     <div className="info-box">
       <h1>Certifications</h1>
       <div className="cert-list">
-        <a href="#" onClick={(e) => e.preventDefault()}>
+
+        {/* Red Hat Certifications */}
+        <a href="/" onClick={(e) => e.preventDefault()} role="button">
           Red Hat RH104 - Linux Fundamentals 9.1
         </a>
-        <a href="#" onClick={(e) => e.preventDefault()}>
+        <a href="/" onClick={(e) => e.preventDefault()} role="button">
           Red Hat RH124 - System Administration I 9.3
         </a>
-        <a href="#" onClick={(e) => e.preventDefault()}>
+        <a href="/" onClick={(e) => e.preventDefault()} role="button">
           Red Hat RH134 - System Administration II 9.3
         </a>
+
+        {/* Oracle Certifications */}
         <a
           href="https://www.linkedin.com/posts/purvaja-mandlik_activity-7235927685972000768--XhP?utm_source=share&utm_medium=member_desktop&rcm=ACoAAEY5uc0B1zH9fh_jWo-XTSoVtC-HA1WZX08"
           target="_blank"
@@ -28,6 +32,8 @@ const Certification = () => {
         >
           Oracle OCI 2024 - AI Foundations Associate
         </a>
+
+        {/* Coursera Certifications */}
         <a
           href="https://www.coursera.org/account/accomplishments/specialization/20IPGLUNLL58"
           target="_blank"
@@ -63,9 +69,10 @@ const Certification = () => {
         >
           Coursera - Foundation of Cybersecurity
         </a>
+
       </div>
     </div>
   );
 };
 
-export default Certification;
+export default Certifications;
